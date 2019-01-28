@@ -9,12 +9,19 @@ class ViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         let layer = imageView.layer
-        let anim: CABasicAnimation = CABasicAnimation(keyPath: "opacity")
-        anim.fromValue = 1.0
-        anim.toValue = 0.0
-        anim.duration = 2.0
-        layer.add(anim, forKey: "disappear")
-        imageView.alpha = 0.0
+
+        let anim = CABasicAnimation(keyPath: "transform")
+        
+        let txform = layer.transform
+        anim.fromValue = txform
+        
+        let angle = CGFloat.pi/2
+        let rotTxForm = CATransform3DRotate(txform, angle, 0.0, 0.0, 1.0)
+        anim.toValue = rotTxForm
+        
+        anim.duration = 1.0
+        layer.add(anim, forKey: "spin")
+        layer.transform = rotTxForm
     }
     
     override func viewDidLoad() {
