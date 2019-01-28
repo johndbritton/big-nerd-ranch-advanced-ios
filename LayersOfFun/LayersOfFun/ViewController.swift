@@ -10,21 +10,22 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         let layer = imageView.layer
 
-        let anim = CABasicAnimation(keyPath: "transform")
+        let anim = CAKeyframeAnimation(keyPath: "transform")
         
         let txform = layer.transform
-        anim.fromValue = txform
         
         let angle = CGFloat.pi/2
-        let rotTxForm = CATransform3DRotate(txform, angle, 0.0, 0.0, 1.0)
-        anim.toValue = rotTxForm
+        let scaleTxform = CATransform3DScale(txform, 0.5, 0.5, 0.5)
+        let rotTxform = CATransform3DRotate(txform, angle, 0.0, 0.0, 1.0)
+
+        anim.values = [txform, scaleTxform, rotTxform]
         
         anim.duration = 1.0
         anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         anim.autoreverses = true
         anim.repeatCount = Float.infinity
         layer.add(anim, forKey: "spin")
-        layer.transform = rotTxForm
+        layer.transform = rotTxform
     }
     
     override func viewDidLoad() {
