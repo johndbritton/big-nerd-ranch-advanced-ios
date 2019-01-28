@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         anim.toValue = rotTxForm
         
         anim.duration = 1.0
+        anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        anim.autoreverses = true
+        anim.repeatCount = Float.infinity
         layer.add(anim, forKey: "spin")
         layer.transform = rotTxForm
     }
