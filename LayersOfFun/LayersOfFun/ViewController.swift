@@ -15,10 +15,18 @@ class ViewController: UIViewController {
             topPin.isActive = false
         }
         
-        let animator = UIViewPropertyAnimator(duration: 1.0, curve: .easeInOut) {
+        let params = UISpringTimingParameters(mass: 0.5,
+                                              stiffness: 50.0,
+                                              damping: 1.0,
+                                              initialVelocity: CGVector.zero)
+        
+        let animator = UIViewPropertyAnimator(duration: 1.0, timingParameters: params)
+
+        animator.addAnimations {
             self.imageHeight.constant -= 100
             self.view.layoutIfNeeded()
         }
+        
         animator.startAnimation()
         
     }
