@@ -12,6 +12,10 @@ class ViewController: UIViewController {
 
         let anim = CAKeyframeAnimation(keyPath: "transform")
         
+        var perspective = CATransform3DIdentity
+        perspective.m34 = -1.0/1000.0
+        layer.transform = perspective
+        
         let txform = layer.transform
         
         let angle = CGFloat.pi
