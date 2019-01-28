@@ -15,8 +15,11 @@ class ViewController: UIViewController {
             topPin.isActive = false
         }
         
-        imageHeight.constant -= 100
-        view.layoutIfNeeded()
+        let animator = UIViewPropertyAnimator(duration: 1.0, curve: .easeInOut) {
+            self.imageHeight.constant -= 100
+            self.view.layoutIfNeeded()
+        }
+        animator.startAnimation()
         
     }
     
