@@ -31,5 +31,14 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        imageView.layer.cornerRadius = 20.0
+        imageView.layer.masksToBounds = true
+        
+        imageView.layer.borderWidth = 5.0
+        imageView.layer.borderColor = UIColor.orange.cgColor
+    }
     
 }
