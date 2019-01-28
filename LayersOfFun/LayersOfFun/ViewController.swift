@@ -14,11 +14,10 @@ class ViewController: UIViewController {
         
         let txform = layer.transform
         
-        let angle = CGFloat.pi/2
-        let scaleTxform = CATransform3DScale(txform, 0.5, 0.5, 0.5)
-        let rotTxform = CATransform3DRotate(txform, angle, 0.0, 0.0, 1.0)
+        let angle = CGFloat.pi
+        let rotTxform = CATransform3DRotate(txform, angle, 0.0, 1.0, 0.0)
 
-        anim.values = [txform, scaleTxform, rotTxform]
+        anim.values = [txform, rotTxform]
         
         anim.duration = 1.0
         anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
