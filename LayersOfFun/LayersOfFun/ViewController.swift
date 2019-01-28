@@ -18,12 +18,14 @@ class ViewController: UIViewController {
         
         let txform = layer.transform
         
-        let angle = CGFloat.pi
+        let angle = CGFloat.pi/2
         let rotTxform = CATransform3DRotate(txform, angle, 0.0, 1.0, 0.0)
-
-        anim.values = [txform, rotTxform]
+        let rotAndMoveLeft = CATransform3DTranslate(rotTxform, 0.0, 0.0, -100.0)
+        let rotAndMoveRight = CATransform3DTranslate(rotTxform, 0.0, 0.0, 100.0)
         
-        anim.duration = 1.0
+        anim.values = [txform, rotTxform, rotAndMoveLeft, rotAndMoveRight, rotTxform, txform]
+        
+        anim.duration = 2.0
         anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         anim.autoreverses = true
         anim.repeatCount = Float.infinity
