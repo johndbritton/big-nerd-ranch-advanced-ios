@@ -10,6 +10,7 @@ import UIKit
 
 let GithubUserNameDefaultsKey = "GithubUserNameDefaultsKey"
 let GithubAuthTokenDefaultsKey = "GithubAuthTokenDefaultsKey"
+let SharedDefaultsSuiteName = "group.com.johndbritton.SurelyYouGist"
 
 class GithubClient: NSObject {
     
@@ -34,12 +35,12 @@ class GithubClient: NSObject {
     // Github Credentials
     var userID: String? {
         get {
-            let defaults = UserDefaults.standard
-            return defaults.string(forKey: GithubUserNameDefaultsKey)
+            let defaultsSuite = UserDefaults(suiteName: SharedDefaultsSuiteName)
+            return defaultsSuite?.string(forKey: GithubUserNameDefaultsKey)
         }
         set {
-            let defaults = UserDefaults.standard
-            defaults.set(newValue, forKey: GithubUserNameDefaultsKey)
+            let defaultsSuite = UserDefaults(suiteName: SharedDefaultsSuiteName)
+            defaultsSuite?.set(newValue, forKey: GithubUserNameDefaultsKey)
             configureSession()
         }
     }

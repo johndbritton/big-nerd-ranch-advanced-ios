@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52330BC6220158680078C61E /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52330BC5220158680078C61E /* ShareViewController.swift */; };
+		52330BC9220158680078C61E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52330BC7220158680078C61E /* MainInterface.storyboard */; };
+		52330BCD220158680078C61E /* Gistizer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52330BC3220158680078C61E /* Gistizer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52330BD222015A430078C61E /* GithubKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B034F220136A6009D6D13 /* GithubKeychain.swift */; };
 		523B0350220136A6009D6D13 /* GithubKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B034F220136A6009D6D13 /* GithubKeychain.swift */; };
 		83746353199A924700490701 /* GithubClientConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83746352199A924700490701 /* GithubClientConsumer.swift */; };
 		A67166DE197F05A600E8B476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67166DD197F05A600E8B476 /* AppDelegate.swift */; };
@@ -25,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		52330BCB220158680078C61E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A67166D0197F05A600E8B476 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52330BC2220158680078C61E;
+			remoteInfo = Gistizer;
+		};
 		A67166EB197F05A600E8B476 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A67166D0197F05A600E8B476 /* Project object */;
@@ -34,7 +45,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		52330BD1220158680078C61E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				52330BCD220158680078C61E /* Gistizer.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		52330BC3220158680078C61E /* Gistizer.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Gistizer.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		52330BC5220158680078C61E /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		52330BC8220158680078C61E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		52330BCA220158680078C61E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52330BD322015B1A0078C61E /* SurelyYouGist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SurelyYouGist.entitlements; sourceTree = "<group>"; };
+		52330BD422015B480078C61E /* Gistizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gistizer.entitlements; sourceTree = "<group>"; };
 		523B034F220136A6009D6D13 /* GithubKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubKeychain.swift; sourceTree = "<group>"; };
 		83746352199A924700490701 /* GithubClientConsumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubClientConsumer.swift; sourceTree = "<group>"; };
 		A67166D8197F05A600E8B476 /* SurelyYouGist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurelyYouGist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +88,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		52330BC0220158680078C61E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A67166D5197F05A600E8B476 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,11 +112,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52330BC4220158680078C61E /* Gistizer */ = {
+			isa = PBXGroup;
+			children = (
+				52330BD422015B480078C61E /* Gistizer.entitlements */,
+				52330BC5220158680078C61E /* ShareViewController.swift */,
+				52330BC7220158680078C61E /* MainInterface.storyboard */,
+				52330BCA220158680078C61E /* Info.plist */,
+			);
+			path = Gistizer;
+			sourceTree = "<group>";
+		};
 		A67166CF197F05A600E8B476 = {
 			isa = PBXGroup;
 			children = (
 				A67166DA197F05A600E8B476 /* SurelyYouGist */,
 				A67166ED197F05A600E8B476 /* SurelyYouGistTests */,
+				52330BC4220158680078C61E /* Gistizer */,
 				A67166D9197F05A600E8B476 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +138,7 @@
 			children = (
 				A67166D8197F05A600E8B476 /* SurelyYouGist.app */,
 				A67166EA197F05A600E8B476 /* SurelyYouGistTests.xctest */,
+				52330BC3220158680078C61E /* Gistizer.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +146,7 @@
 		A67166DA197F05A600E8B476 /* SurelyYouGist */ = {
 			isa = PBXGroup;
 			children = (
+				52330BD322015B1A0078C61E /* SurelyYouGist.entitlements */,
 				A67166DD197F05A600E8B476 /* AppDelegate.swift */,
 				A6FC92AF198829F1006A4D51 /* User Story */,
 				A6FC92AD1986D8BB006A4D51 /* Connecting to Github */,
@@ -145,6 +197,7 @@
 		A6FC92AD1986D8BB006A4D51 /* Connecting to Github */ = {
 			isa = PBXGroup;
 			children = (
+				523B034F220136A6009D6D13 /* GithubKeychain.swift */,
 				83746352199A924700490701 /* GithubClientConsumer.swift */,
 				A6716706197F190900E8B476 /* GithubClient.swift */,
 			);
@@ -155,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				A67166E1197F05A600E8B476 /* Main.storyboard */,
-				523B034F220136A6009D6D13 /* GithubKeychain.swift */,
 				A67166FA197F069A00E8B476 /* GistListViewController.swift */,
 				A67166FC197F06B200E8B476 /* FileListViewController.swift */,
 				A67166FE197F06C300E8B476 /* FileViewController.swift */,
@@ -166,6 +218,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		52330BC2220158680078C61E /* Gistizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52330BD0220158680078C61E /* Build configuration list for PBXNativeTarget "Gistizer" */;
+			buildPhases = (
+				52330BBF220158680078C61E /* Sources */,
+				52330BC0220158680078C61E /* Frameworks */,
+				52330BC1220158680078C61E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gistizer;
+			productName = Gistizer;
+			productReference = 52330BC3220158680078C61E /* Gistizer.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A67166D7197F05A600E8B476 /* SurelyYouGist */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A67166F4197F05A600E8B476 /* Build configuration list for PBXNativeTarget "SurelyYouGist" */;
@@ -173,10 +242,12 @@
 				A67166D4197F05A600E8B476 /* Sources */,
 				A67166D5197F05A600E8B476 /* Frameworks */,
 				A67166D6197F05A600E8B476 /* Resources */,
+				52330BD1220158680078C61E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				52330BCC220158680078C61E /* PBXTargetDependency */,
 			);
 			name = SurelyYouGist;
 			productName = SurelyYouGist;
@@ -208,13 +279,32 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0710;
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Big Nerd Ranch";
 				TargetAttributes = {
+					52330BC2220158680078C61E = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
 					A67166D7197F05A600E8B476 = {
 						CreatedOnToolsVersion = 6.0;
 						LastSwiftMigration = 0900;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					A67166E9197F05A600E8B476 = {
 						CreatedOnToolsVersion = 6.0;
@@ -237,11 +327,20 @@
 			targets = (
 				A67166D7197F05A600E8B476 /* SurelyYouGist */,
 				A67166E9197F05A600E8B476 /* SurelyYouGistTests */,
+				52330BC2220158680078C61E /* Gistizer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		52330BC1220158680078C61E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52330BC9220158680078C61E /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A67166D6197F05A600E8B476 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,6 +361,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		52330BBF220158680078C61E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52330BD222015A430078C61E /* GithubKeychain.swift in Sources */,
+				52330BC6220158680078C61E /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A67166D4197F05A600E8B476 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +399,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		52330BCC220158680078C61E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52330BC2220158680078C61E /* Gistizer */;
+			targetProxy = 52330BCB220158680078C61E /* PBXContainerItemProxy */;
+		};
 		A67166EC197F05A600E8B476 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A67166D7197F05A600E8B476 /* SurelyYouGist */;
@@ -299,6 +412,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		52330BC7220158680078C61E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52330BC8220158680078C61E /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		A67166E1197F05A600E8B476 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -310,6 +431,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		52330BCE220158680078C61E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Gistizer/Gistizer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GN5Q29GQ9T;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Gistizer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.johndbritton.SurelyYouGist.Gistizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52330BCF220158680078C61E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Gistizer/Gistizer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GN5Q29GQ9T;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Gistizer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.johndbritton.SurelyYouGist.Gistizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A67166F2197F05A600E8B476 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -417,13 +603,17 @@
 		A67166F5197F05A600E8B476 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SurelyYouGist/SurelyYouGist.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = GN5Q29GQ9T;
 				INFOPLIST_FILE = SurelyYouGist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bignerdranch.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johndbritton.SurelyYouGist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -433,13 +623,17 @@
 		A67166F6197F05A600E8B476 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SurelyYouGist/SurelyYouGist.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = GN5Q29GQ9T;
 				INFOPLIST_FILE = SurelyYouGist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bignerdranch.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johndbritton.SurelyYouGist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -493,6 +687,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		52330BD0220158680078C61E /* Build configuration list for PBXNativeTarget "Gistizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52330BCE220158680078C61E /* Debug */,
+				52330BCF220158680078C61E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A67166D3197F05A600E8B476 /* Build configuration list for PBXProject "SurelyYouGist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
