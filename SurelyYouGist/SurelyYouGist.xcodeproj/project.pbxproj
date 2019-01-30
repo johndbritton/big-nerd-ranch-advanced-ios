@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523B0350220136A6009D6D13 /* GithubKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B034F220136A6009D6D13 /* GithubKeychain.swift */; };
 		83746353199A924700490701 /* GithubClientConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83746352199A924700490701 /* GithubClientConsumer.swift */; };
 		A67166DE197F05A600E8B476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67166DD197F05A600E8B476 /* AppDelegate.swift */; };
 		A67166E3197F05A600E8B476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67166E1197F05A600E8B476 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		523B034F220136A6009D6D13 /* GithubKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubKeychain.swift; sourceTree = "<group>"; };
 		83746352199A924700490701 /* GithubClientConsumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubClientConsumer.swift; sourceTree = "<group>"; };
 		A67166D8197F05A600E8B476 /* SurelyYouGist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurelyYouGist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67166DC197F05A600E8B476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				A67166E1197F05A600E8B476 /* Main.storyboard */,
+				523B034F220136A6009D6D13 /* GithubKeychain.swift */,
 				A67166FA197F069A00E8B476 /* GistListViewController.swift */,
 				A67166FC197F06B200E8B476 /* FileListViewController.swift */,
 				A67166FE197F06C300E8B476 /* FileViewController.swift */,
@@ -273,6 +276,7 @@
 				A67166DE197F05A600E8B476 /* AppDelegate.swift in Sources */,
 				A67166FF197F06C300E8B476 /* FileViewController.swift in Sources */,
 				A67166FD197F06B200E8B476 /* FileListViewController.swift in Sources */,
+				523B0350220136A6009D6D13 /* GithubKeychain.swift in Sources */,
 				A6716707197F190900E8B476 /* GithubClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

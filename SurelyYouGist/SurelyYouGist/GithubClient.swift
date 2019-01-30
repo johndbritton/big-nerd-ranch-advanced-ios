@@ -46,12 +46,11 @@ class GithubClient: NSObject {
     
     var accessToken: String? {
         get {
-            let defaults = UserDefaults.standard
-            return defaults.string(forKey: GithubAuthTokenDefaultsKey)
+            return GithubKeychain.token()
         }
         set {
-            let defaults = UserDefaults.standard
-            defaults.set(newValue, forKey: GithubAuthTokenDefaultsKey)
+            _ = GithubKeychain.storeToken(newValue)
+            configureSession()
         }
     }
     
