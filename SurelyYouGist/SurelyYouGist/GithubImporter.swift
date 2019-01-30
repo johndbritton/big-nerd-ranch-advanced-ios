@@ -43,6 +43,26 @@ class GithubImporter {
             throw GithubError.invalidDataError("Could not decode data as UTF8 string")
         }
     }
+    
+    fileprivate class func tokenFromJSONTokenDict(_ tokenDict: JSONDictionary) throws -> String {
+        guard let token = tokenDict["access_token"] as? String else {
+            throw GithubError.jsonContentError("Failed to unpack content of auth token dict")
+        }
+        
+        return token
+    }
+    
+    class func tokenFromData(_ data: Data) throws -> String {
+        do {
+            if let tokenDict = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary {
+                return try tokenFromJSONTokenDict(tokenDict)
+            } else {
+                throw GithubError.jsonContentError("JSON top level object wasn't a token dictionary as expected")
+            }
+        } catch (let jsonError as NSError) {
+            throw GithubError.jsonSerializationError(jsonError.localizedDescription)
+        }
+    }
 }
 
 // MARK: - Private helper methods

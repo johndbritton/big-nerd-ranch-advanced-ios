@@ -12,6 +12,11 @@ class GistListViewController: UITableViewController, UITextFieldDelegate, Github
 
     @IBOutlet weak var usernameField: UITextField!
 
+    @IBAction func loginButtonPressed(sender: AnyObject) {
+        usernameField.endEditing(true)
+        githubClient?.beginAuthorizationByFetchingGrant()
+    }
+    
     var gistsToShow = [GithubGist]()
     var githubClient: GithubClient?
     

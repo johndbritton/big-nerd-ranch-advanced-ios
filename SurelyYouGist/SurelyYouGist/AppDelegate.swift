@@ -8,6 +8,11 @@
 
 import UIKit
 
+extension NSNotification.Name {
+    static public let SygistDidReceiveURLNotification = NSNotification.Name("ApplicationDidReceiveURLNotification")
+}
+let SygistOpenURLInfoKey = "ApplicationOpenURLInfoKey"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GithubClientConsumer {
                             
@@ -21,6 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GithubClientConsumer {
             clientConsumer.githubClient = githubClient
         }
         
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let userInfo = [SygistOpenURLInfoKey:url]
+        let nc = NotificationCenter.default
+        nc.post(name: .SygistDidReceiveURLNotification, object: self, userInfo: userInfo)
         return true
     }
     
